@@ -26,7 +26,8 @@ append_or_update() {
 echo "Downloading and extracting Flash $latest for architecture $arch..."
 
 #curl -sL "https://fpdownload.adobe.com/pub/flashplayer/pdc/$latest/flash_player_ppapi_linux.$arch.tar.gz" | tar xzf - -C $flashdir
-wget "http://static.oje.inf.br/recife/flash_player_ppapi_linux.i386.tar.gz" | tar xzf - -C $flashdir
+wget "http://static.oje.inf.br/recife/flash_player_ppapi_linux.i386.tar.gz"
+tar -xvzf flash_player_ppapi_linux.i386.tar.gz -C $flashdir
 chmod +x $flashlib
  
 echo "Editing $conf..."
